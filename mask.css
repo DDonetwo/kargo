@@ -1,0 +1,8 @@
+.mask-custom {
+    -webkit-mask-image: url('asset/mask-hero.svg');
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: cover;
+    mask-image: url('asset/mask-hero.svg');
+    mask-repeat: no-repeat;
+    mask-size: cover;
+}
