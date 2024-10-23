@@ -1,3 +1,6 @@
+
+
+
 //свитч
 const listItems = document.querySelectorAll('li');
 const imageDisplay = document.getElementById('image-display');

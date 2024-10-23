@@ -1,15 +1,22 @@
 
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('#openForm').forEach(item =>
         item.addEventListener('click', () => {
             document.getElementById('popup').style.display = 'flex';
+            // Заблокировать скролл
+            document.body.classList.add('overflow-hidden');
         })
     );
-
+    
     document.querySelectorAll('#close').forEach(item =>
         item.addEventListener('click', () => {
             document.getElementById('popup').style.display = 'none';
             document.getElementById('popupThank').style.display = 'none';
+            // Разблокировать скролл
+            document.body.classList.remove('overflow-hidden');
         })
     );
 
@@ -37,11 +44,11 @@ document.addEventListener('DOMContentLoaded', function () {
         const header = document.getElementById('header');
 
         if (window.scrollY > 50) {
-            header.classList.add('bg-customgradient', 'md:py-3', 'py-[0.1rem]');
+            header.classList.add('bg-white', 'md:py-3', 'py-[0.1rem]','shadow-md');
             header.classList.remove('bg-transparent', 'md:py-9');
         } else {
             header.classList.add('bg-transparent', 'md:py-9');
-            header.classList.remove('bg-customgradient', 'md:py-3', 'py-[0.1rem]');
+            header.classList.remove('bg-white', 'md:py-3', 'py-[0.1rem]', 'shadow-md');
         }
     });
 

@@ -1,0 +1,25 @@
+<svg width="66.399902" height="66.399902" viewBox="0 0 66.3999 66.3999" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<filter id="filter_29_38_dd" x="0.000000" y="0.000000" width="66.399902" height="66.399902" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+			<feMorphology radius="-2" in="" result="BackgroundImageFix"/>
+			<feOffset dx="-1" dy="6"/>
+			<feGaussianBlur stdDeviation="3.4"/>
+			<feComposite in2="hardAlpha" operator="out" k2="-1" k3="1"/>
+			<feColorMatrix type="matrix" values="0 0 0 0 0.12941 0 0 0 0 0.54902 0 0 0 0 0.2549 0 0 0 0.15 0"/>
+			<feBlend mode="normal" in2="BackgroundImageFix" result="effect_dropShadow_1"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="effect_dropShadow_1" result="shape"/>
+		</filter>
+	</defs>
+	<circle id="Ellipse 1" cx="34.199951" cy="27.199951" r="17.857143" fill="#218C41" fill-opacity="1.000000"/>
+	<g filter="url(#filter_29_38_dd)">
+		<circle id="Ellipse 2" cx="34.199951" cy="27.199951" r="25.000000" fill="#218C41" fill-opacity="0.200000"/>
+		<circle id="Ellipse 2" cx="34.199951" cy="27.199951" r="24.500000" stroke="#218C41" stroke-opacity="0.500000" stroke-width="1.000000"/>
+	</g>
+	<circle id="Ellipse 3" cx="34.199951" cy="27.199951" r="10.714285" fill="#FFFFFF" fill-opacity="0.700000"/>
+	<circle id="Ellipse 4" cx="34.199829" cy="27.199829" r="3.571429" fill="#218C41" fill-opacity="1.000000"/>
+</svg>

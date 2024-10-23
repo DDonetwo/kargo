@@ -22,57 +22,70 @@
     <script>
         tailwind.config = {
             theme: {
+                extend: {
+                    animation: {
+                        'fade-in-up': 'fadeInUp 1.5s ease forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                    },
+                },
                 fontFamily: {
                     openSans: ['Open Sans', 'sans-serif']
                 },
                 colors: {
                     blcBlack: '#3F3939',
-                    blcGrey: '#E4E4E4',
+                    blcGrey: 'rgb(239, 239, 239)',
                     blcGreyText: 'rgb(144, 143, 143)',
                     blcGreen: 'rgb(33, 140, 65)',
-                    white: 'rgb(255, 255, 255)'
+                    white: 'rgb(255, 255, 255)',
+
                 }
             },
         }
     </script>
 </head>
 
-<body id="body" class="text-blcBlack font-openSans pt-5">
+<body id="body" class="text-blcBlack font-openSans pt-5 leading-tight">
     <div id="popup"
-        class="z-[1000] hidden fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50">
+        class="z-[1000] hidden fixed top-0 left-0 w-full h-full flex items-center justify-center bg-blcBlack bg-opacity-50">
         <form id="form-base-1" name="form-base-1" method="post" class="flex items-center justify-center">
-            <div class="bg-customgradient w-[85%] md:w-[39rem] h-auto text-white flex flex-col rounded-xl">
+            <div class="bg-white w-[90%] md:w-[40rem] h-auto flex flex-col rounded-2xl">
+
                 <img id="close"
                     class="md:w-5 w-4 h-4 md:h-5 self-end transition-all duration-500 ease-linear hover:opacity-40 mt-5 mr-5"
                     src="./asset/close.svg" alt="Закрыть окно">
-                <div class="px-5 md:px-10 h-full flex flex-col justify-center">
-                    <h4 class="text-white font-black text-4xl pb-4 md:text-5xl">Заказать звонок</h4>
-                    <p class="">Оставьте заявку, мы свяжемся с вами, ответим на все интересующие вопросы и поможем найти
-                        решение проблемы
+                <div class="px-5 pb-10 md:px-10 h-full flex flex-col justify-center">
+                    <h4 class="font-black text-4xl pb-4 md:text-5xl">Заказать звонок</h4>
+                    <p class="text-blcGreyText text-2xl font-medium">Заполните форму и менеджер свяжется с вами в
+                        ближайшее время.
                     </p>
                     <div class="flex flex-col gap-3 pt-6">
                         <input id="inputName" name="name" type="text" tabindex="1" placeholder="Ваше имя"
-                            class="relative w-full rounded-full py-[1.2rem] px-8 placeholder-[#769AC1]  active:border-0 outline-none hover:outline-none hover:ring-0 hover:shadow-none focus:bg-gray-200 focus:outline-none">
+                            class="text-lg bg-blcGrey font-medium  rounded-full py-[1.2rem] px-8 placeholder-blcGreyText  outline-none focus:bg-gray-200 focus:outline-none hover:outline-none hover:ring-0 hover:shadow-none"
+                            type="text">
                         <input id="inputPhone" name="phone" type="text" tabindex="2" placeholder="*Ваш телефон"
-                            class="relative w-full  rounded-full py-[1.2rem] px-8 placeholder-[#769AC1]  outline-none  hover:outline-none hover:ring-0 hover:shadow-none focus:bg-gray-200 focus:outline-none">
-
+                            class="text-lg bg-blcGrey font-medium  rounded-full py-[1.2rem] px-8 placeholder-blcGreyText  outline-none focus:bg-gray-200 focus:outline-none hover:outline-none hover:ring-0 hover:shadow-none"
+                            type="text">
                         <input id="inputEmail" name="email" type="text" tabindex="3" placeholder="*Ваша эл-почта"
-                            class="relative w-full  rounded-full py-[1.2rem] px-8 placeholder-[#769AC1]  outline-none hover:outline-none hover:ring-0 hover:shadow-none focus:bg-gray-200 focus:outline-none">
+                            class="text-lg bg-blcGrey font-medium  rounded-full py-[1.2rem] px-8 placeholder-blcGreyText  outline-none focus:bg-gray-200 focus:outline-none hover:outline-none hover:ring-0 hover:shadow-none"
+                            type="text">
                     </div>
-                    <p class="text-lightgreen text-[0.70rem] pt-3">*обязательно для заполнения</p>
-                    <div class="flex items-center w-full justify-between pb-7">
-                        <input id="send" name="form-base-submit" type="submit" value="Отправить" tabindex="4"
-                            class="relative w-full  flex items-center justify-center w-[48%] mt-5  font-medium py-5 px-16 rounded-full transition-all duration-300 border-lightgreen border-2 hover:text-lightgreen hover:bg-[rgba(0,0,0,0.25)]">
-
-                        <p class="pl-3 light text-[0.70rem] pt-3 w-full">Нажимая на кнопку “Оставить
-                            заявку”,
-                            Вы соглашаетесь с политикой обработки ПД</p>
+                    <p class="text-md text-blcGreyText font-medium leading-4 pb-10 pt-2">*обязательно для заполнения
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <input id="send-1" name="form-base-submit" type="submit" value="Отправить"
+                            class="w-[48%] bg-blcGreen text-white text-2xl font-medium items-center flex rounded-full gap-3 py-4 px-10 text-blcGreen border-4 font-bold">
+                        <p class="w-[48%] text-md text-blcGreyText font-medium leading-4">Нажимая на кнопку
+                            “Оставить заявку”, Вы соглашаетесь с политикой обработки ПД</p>
                     </div>
                 </div>
             </div>
         </form>
     </div>
-
     <div id="popupThank"
         class="z-[1000] top-0 fixed hidden left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50">
         <div
@@ -127,42 +140,47 @@
         </div>
     </div>
 
-    <div class="mask-custom h-[70.1rem] flex mx-auto md:mx-[27rem] sm:max-w-full lg:max-w-full lg:mx-[15rem] xl:mx-[22rem] 2xl:mx-[22rem] bg-no-repeat bg-cover bg-center md:p-20 px-3"
+    <div id="hero"
+        class="mask-custom h-[70.1rem] flex mx-auto md:mx-[27rem] sm:max-w-full lg:max-w-full lg:mx-[15rem] xl:mx-[22rem] 2xl:mx-[22rem] bg-no-repeat bg-cover bg-center md:p-20 px-3"
         style="background-image: url('./asset/hero.jpeg');">
         <div class="flex items-center">
-            <div class="text-white  mb-[6.2rem] w-[45%] flex flex-col pt-40">
-                <h1 class="md:text-7xl md:pt-[3.3rem] text-6xl font-black pb-4  text-white">
+            <div class="text-white mb-[6.2rem] w-[45%] flex flex-col pt-40">
+                <h1 class="md:text-7xl md:pt-[3.3rem] text-6xl font-black pb-4 text-white anim">
                     BEST LOGISTIC <br>
-                    COMPANY</h1>
-                <h3 class="text-4xl">Индивидуальный подход <br>к каждому заказу</h3>
-                <p class=" pb-7 md:leading-[1.9rem] leading-6 md:text-2xl pt-20">
+                    COMPANY
+                </h1>
+                <h3 class="text-4xl anim">Индивидуальный подход <br>к каждому заказу</h3>
+                <p class="pb-7 md:leading-[1.9rem] leading-6 md:text-2xl pt-20 anim">
                     Выкупаем и доставляем товары
                     с китайских площадок: Taobao, AliExpress, 1688, т.д
-                    Минимальный вес для доставки: 1 кг
-                    Срок от: 10000 дней</p>
+                    Минимальный вес для доставки: 1 кг
+                    Срок от: 10000 дней
+                </p>
 
-                <div class="bg-no-repeat bg-cover bg-center h-[11.3rem] text-blcBlack pt-5 pr-5 pl-5 pb-10 flex flex-col gap-2 justify-between mt-40"
+                <div class="bg-no-repeat bg-cover bg-center h-[11.3rem] text-blcBlack pt-5 pr-6 pl-6 pb-10 flex flex-col gap-2 justify-between mt-40 anim"
                     style="background-image: url('./asset/form.svg');">
-                    <h4 class="text-2xl font-bold">Оставить заявку</h4>
+                    <h4 class="text-2xl font-bold pt-2">Оставить заявку</h4>
                     <form class="flex justify-between items-center gap-2" action="">
                         <input id="inputEmail" name="email" type="text" tabindex="3" placeholder="*Ваша эл-почта"
-                        class="flex-1 px-4 bg-blcGrey rounded-full py-3 placeholder-blcGreyText  outline-none focus:bg-gray-200 focus:outline-none hover:outline-none hover:ring-0 hover:shadow-none"
-                        type="text">
+                            class="flex-1 px-4 bg-blcGrey font-medium rounded-full py-[0.9rem] placeholder-blcGreyText outline-none focus:bg-gray-200 focus:outline-none hover:outline-none hover:ring-0 hover:shadow-none">
                         <input id="send-1" name="form-base-submit" type="submit" value="Отправить"
-                            class="flex-2 px-10 bg-blcGreen text-white font-medium items-center flex rounded-full gap-3 py-3 text-blcGreen border-4  font-bold text-lg ">
-                    
+                            class="flex-2 px-10 bg-blcGreen text-white font-medium items-center flex rounded-full gap-3 py-2 text-blcGreen border-blcGreen border-4 font-bold text-lg  hover:text-blcGreen hover:bg-[rgba(0,0,0,0.001)] transition-all duration-500">
                     </form>
                 </div>
             </div>
         </div>
     </div>
+
+
+
+
+
     <div id=""
         class=" mx-auto px-3 pt-11 pb-7 md:pt-[6.4rem] md:px-[27rem] sm:max-w-full lg:max-w-full lg:px-[15rem] xl:px-[22rem] 2xl:px-[22rem]">
-
         <div class="flex justify-between">
             <div class="w-[45%]  ">
                 <ul class="w-full h-full flex flex-col justify-between">
-                    <li class="flex items-top justify-between border-b-[3px] border-blcGrey flex-1 py-10">
+                    <li class="flex items-top justify-between border-b-[3px] border-blcGrey flex-1 py-10 anim">
                         <div class="text-blcGrey font-black text-7xl">01</div>
                         <div class="text-center">
                             <h2 class="font-black text-4xl pb-4 md:text-5xl">Выберите товар</h2>
@@ -170,8 +188,8 @@
                         </div>
                         <div>
                             <button>
-                                <svg class="w-6 h-6" width="21.260376" height="20.660339" viewBox="0 0 21.2604 20.6603"
-                                    fill="none" xmlns="http://www.w3.org/2000/svg"
+                                <svg class="w-6 h-6 mt-[1rem]" width="21.260376" height="20.660339"
+                                    viewBox="0 0 21.2604 20.6603" fill="none" xmlns="http://www.w3.org/2000/svg"
                                     xmlns:xlink="http://www.w3.org/1999/xlink">
                                     <desc>
                                         Created with Pixso.
@@ -184,16 +202,17 @@
                             </button>
                         </div>
                     </li>
-                    <li class="flex items-top justify-between  border-b-[3px] border-blcGrey flex-1  py-10">
+                    <li class="flex items-top justify-between  border-b-[3px] border-blcGrey flex-1  py-10 anim">
                         <div class="text-blcGrey font-black text-7xl">02</div>
                         <div class="text-center">
                             <h2 class="font-black text-4xl pb-4 md:text-5xl">Заполните форму</h2>
-                            <p class="text-blcGreyText text-2xl font-medium">и получите обратную связь от специалиста</p>
+                            <p class="text-blcGreyText text-2xl font-medium">и получите обратную связь от специалиста
+                            </p>
                         </div>
                         <div>
                             <button>
-                                <svg class="w-6 h-6" width="21.260376" height="20.660339" viewBox="0 0 21.2604 20.6603"
-                                    fill="none" xmlns="http://www.w3.org/2000/svg"
+                                <svg class="w-6 h-6 mt-[1rem]" width="21.260376" height="20.660339"
+                                    viewBox="0 0 21.2604 20.6603" fill="none" xmlns="http://www.w3.org/2000/svg"
                                     xmlns:xlink="http://www.w3.org/1999/xlink">
                                     <desc>
                                         Created with Pixso.
@@ -206,7 +225,7 @@
                             </button>
                         </div>
                     </li>
-                    <li class="flex items-top justify-between  border-b-[3px] border-blcGrey flex-1  py-10">
+                    <li class="flex items-top justify-between  border-b-[3px] border-blcGrey flex-1  py-10 anim">
                         <div class="text-blcGrey font-black text-7xl">03</div>
                         <div class="text-center">
                             <h2 class="font-black text-4xl pb-4 md:text-5xl">Отслеживайте заказ</h2>
@@ -214,8 +233,8 @@
                         </div>
                         <div>
                             <button>
-                                <svg class="w-6 h-6" width="21.260376" height="20.660339" viewBox="0 0 21.2604 20.6603"
-                                    fill="none" xmlns="http://www.w3.org/2000/svg"
+                                <svg class="w-6 h-6 mt-[1rem]" width="21.260376" height="20.660339"
+                                    viewBox="0 0 21.2604 20.6603" fill="none" xmlns="http://www.w3.org/2000/svg"
                                     xmlns:xlink="http://www.w3.org/1999/xlink">
                                     <desc>
                                         Created with Pixso.
@@ -231,10 +250,10 @@
                 </ul>
             </div>
             <div class="w-[45%] flex flex-col justify-between h-full">
-                <h2 class=" font-black text-4xl pb-4 md:text-5xl">Мы — команда профессионалов,
+                <h2 class=" font-black text-4xl pb-4 md:text-5xl anim">Мы — команда профессионалов,
                     специализирующихся на международных грузовых перевозках.</h2>
                 <div class="leading-5">
-                    <div class="text-blcGreyText text-2xl font-medium">
+                    <div class="text-blcGreyText text-2xl font-medium anim">
                         Уже много лет мы быстро и безопасно доставляем грузы из Китая в любую точку России. <br><br>
 
                         Наша круглосуточная линия поддержки всегда готова помочь вам
@@ -243,30 +262,28 @@
                     </div>
                 </div>
                 <div>
-                    <button
-                        class="bg-blcGreen text-white text-2xl font-medium items-center flex rounded-full gap-3 py-4 px-10 mt-10 text-blcGreen border-4  font-bold">
-                        <div>Связаться</div>
-                        <svg width="16.634033" height="15.114624" viewBox="0 0 16.634 15.1146" fill="none"
-                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <button id="openForm"
+                        class="anim bg-blcGreen text-white text-2xl font-medium items-center flex justify-center rounded-full gap-4 py-4 px-10 mt-10 border-4 border-blcGreen font-bold hover:text-blcGreen hover:bg-[rgba(0,0,0,0.001)] transition-all duration-500 group">
+                        <div>Связаться с нами</div>
+                        <svg class="group-hover:animate-bounce  " width="25.000000" height="25.000000"
+                            viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
                             <desc>
                                 Created with Pixso.
                             </desc>
                             <defs />
-                            <path id="Arrow 1"
-                                d="M11.27 2.85L2.5 2.85C1.62 2.85 0.93 2.22 0.93 1.42C0.93 0.62 1.62 0 2.5 0L15.06 0C15.94 0 16.63 0.62 16.63 1.42L16.63 12.83C16.63 13.63 15.94 14.26 15.06 14.26C14.18 14.26 13.49 13.63 13.49 12.83L13.49 4.87L2.22 15.11L0 13.09L11.27 2.85Z"
-                                fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd" />
+                            <path class="fill-white transition-colors duration-300 group-hover:fill-blcGreen" id="path"
+                                d="M13.67 0C19.92 0 25 5.07 25 11.32C25 11.97 24.47 12.5 23.82 12.5C23.17 12.5 22.65 11.97 22.65 11.32C22.65 6.36 18.63 2.34 13.67 2.34C13.02 2.34 12.5 1.82 12.5 1.17C12.5 0.52 13.02 0 13.67 0ZM14.06 9.37C14.16 9.37 14.26 9.38 14.36 9.4C14.46 9.42 14.56 9.45 14.66 9.49C14.75 9.53 14.84 9.58 14.93 9.63C15.01 9.69 15.09 9.76 15.16 9.83C15.23 9.9 15.3 9.98 15.36 10.07C15.41 10.15 15.46 10.24 15.5 10.34C15.54 10.43 15.57 10.53 15.59 10.63C15.61 10.73 15.62 10.83 15.62 10.93C15.62 11.04 15.61 11.14 15.59 11.24C15.57 11.34 15.54 11.44 15.5 11.53C15.46 11.63 15.41 11.72 15.36 11.8C15.3 11.89 15.23 11.97 15.16 12.04C15.09 12.11 15.01 12.18 14.93 12.23C14.84 12.29 14.75 12.34 14.66 12.38C14.56 12.42 14.46 12.45 14.36 12.47C14.26 12.49 14.16 12.5 14.06 12.5C13.96 12.5 13.85 12.49 13.75 12.47C13.65 12.45 13.55 12.42 13.46 12.38C13.36 12.34 13.27 12.29 13.19 12.23C13.1 12.18 13.03 12.11 12.95 12.04C12.88 11.97 12.82 11.89 12.76 11.8C12.7 11.72 12.65 11.63 12.61 11.53C12.57 11.44 12.55 11.34 12.53 11.24C12.51 11.14 12.5 11.04 12.5 10.93C12.5 10.83 12.51 10.73 12.53 10.63C12.55 10.53 12.57 10.43 12.61 10.34C12.65 10.24 12.7 10.15 12.76 10.07C12.82 9.98 12.88 9.9 12.95 9.83C13.03 9.76 13.1 9.69 13.19 9.63C13.27 9.58 13.36 9.53 13.46 9.49C13.55 9.45 13.65 9.42 13.75 9.4C13.85 9.38 13.96 9.37 14.06 9.37ZM12.5 5.86C12.5 5.21 13.02 4.68 13.67 4.68C17.33 4.68 20.31 7.66 20.31 11.32C20.31 11.97 19.79 12.5 19.14 12.5C18.49 12.5 17.96 11.97 17.96 11.32C17.96 8.95 16.04 7.03 13.67 7.03C13.02 7.03 12.5 6.5 12.5 5.86ZM5.73 0.06C6.68 -0.19 7.67 0.29 8.05 1.2L10 5.88C10.33 6.68 10.1 7.6 9.43 8.15L7.03 10.12C8.65 13.56 11.44 16.34 14.87 17.96L16.84 15.56C17.39 14.89 18.31 14.66 19.1 14.99L23.79 16.94C24.7 17.32 25.18 18.31 24.92 19.26L23.75 23.55C23.52 24.4 22.75 25 21.87 25C9.79 25 0 15.2 0 3.12C0 2.24 0.59 1.47 1.44 1.24L5.73 0.06Z"
+                                fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero" />
                         </svg>
                     </button>
                 </div>
 
             </div>
         </div>
-
     </div>
-
-
     <div
-        class="container mx-auto px-3 pt-11 pb-7 md:pt-[6.4rem] md:px-[27rem] sm:max-w-full lg:max-w-full lg:px-[15rem] xl:px-[22rem] 2xl:px-[22rem]">
+        class="container mx-auto px-3 pt-11 md:pt-[9rem] md:px-[27rem] sm:max-w-full lg:max-w-full lg:px-[15rem] xl:px-[22rem] 2xl:px-[22rem]">
         <div class="flex justify-between">
             <div class="w-[45%] flex flex-col justify-between h-full">
                 <h2 class=" font-black text-4xl pb-4 md:text-5xl">Международные карго перевозки
@@ -278,107 +295,165 @@
                     </div>
                 </div>
                 <div>
-                    <button
-                        class="bg-blcGreen text-white text-2xl font-medium items-center flex rounded-full gap-3 py-4 px-10 mt-10 text-blcGreen border-4 font-bold">
-                        <div>Связаться</div>
-                        <svg width="16.634033" height="15.114624" viewBox="0 0 16.634 15.1146" fill="none"
-                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <button id="openForm"
+                        class="anim bg-blcGreen text-white text-2xl font-medium items-center flex justify-center rounded-full gap-4 py-4 px-10 mt-10 border-4 border-blcGreen font-bold hover:text-blcGreen hover:bg-[rgba(0,0,0,0.001)] transition-all duration-500 group">
+                        <div>Оставить заявку</div>
+
+                        <svg class="group-hover:animate-bounce" width="25.000000" height="18.750000"
+                            viewBox="0 0 25 18.75" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
                             <desc>
                                 Created with Pixso.
                             </desc>
                             <defs />
-                            <path id="Arrow 1"
-                                d="M11.27 2.85L2.5 2.85C1.62 2.85 0.93 2.22 0.93 1.42C0.93 0.62 1.62 0 2.5 0L15.06 0C15.94 0 16.63 0.62 16.63 1.42L16.63 12.83C16.63 13.63 15.94 14.26 15.06 14.26C14.18 14.26 13.49 13.63 13.49 12.83L13.49 4.87L2.22 15.11L0 13.09L11.27 2.85Z"
-                                fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd" />
+                            <path class="fill-white transition-colors duration-300 group-hover:fill-blcGreen" id="path"
+                                d="M2.34 0C1.04 0 0 1.04 0 2.34C0 3.08 0.34 3.77 0.93 4.21L11.56 12.18C12.11 12.6 12.88 12.6 13.43 12.18L24.06 4.21C24.65 3.77 25 3.08 25 2.34C25 1.04 23.95 0 22.65 0L2.34 0ZM0 5.46L0 15.62C0 17.34 1.4 18.75 3.12 18.75L21.87 18.75C23.59 18.75 25 17.34 25 15.62L25 5.46L14.37 13.43C13.26 14.27 11.73 14.27 10.62 13.43L0 5.46Z"
+                                fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero" />
                         </svg>
                     </button>
                 </div>
             </div>
-            <div class="w-[50%]">
-                <img class="w-full" src="/asset/map.png" alt="">
-            </div>
-        </div>
-    </div>
-    <div
-        class="container mx-auto px-3 pt-11 pb-7 md:pt-[6.4rem] md:px-[27rem] sm:max-w-full lg:max-w-full lg:px-[15rem] xl:px-[22rem] 2xl:px-[22rem]">
-        <div class="flex justify-between">
-            <div class="w-[45%] flex flex-col justify-between h-full">
-                <h2 class=" font-black text-4xl pb-4 md:text-5xl">Логистика и складские услуги </h2>
-                <div class="leading-5">
-                    <div class="text-blcGreyText text-2xl font-medium">
-                        Мы предлагаем полный спектр логистических услуг: хранение, упаковку и распределение грузов.
+            <div class="w-[50%] relative">
+                <img class="w-full" src="/asset/map.svg" alt="">
+
+                <!-- <div
+                    class="absolute top-[15%] left-[73%] rounded-full h-[2rem] w-[2rem] bg-blcGreen border-2 border-white flex justify-center items-center  animate-ping">
+                    <div
+                        class="w-[70%] h-[70%] rounded-full bg-white border-2 border-blcGreen flex justify-center items-center">
+                        <div
+                            class="w-[70%] h-[70%] bg-blcGreen rounded-full border-2 border-white flex justify-center items-center">
+                            <div class="w-[50%] h-[50%] bg-white rounded-full"></div>
+                        </div>
                     </div>
                 </div>
 
+                <div
+                    class="absolute top-[35%] left-[80%] rounded-full h-[2rem] w-[2rem] bg-blcGreen border-2 border-white flex justify-center items-center  animate-ping">
+                    <div
+                        class="w-[70%] h-[70%] rounded-full bg-white border-2 border-blcGreen flex justify-center items-center">
+                        <div
+                            class="w-[70%] h-[70%] bg-blcGreen rounded-full border-2 border-white flex justify-center items-center">
+                            <div class="w-[50%] h-[50%] bg-white rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="absolute top-[25%] left-[55%] rounded-full h-[2rem] w-[2rem] bg-blcGreen border-2 border-white flex justify-center items-center  animate-ping">
+                    <div
+                        class="w-[70%] h-[70%] rounded-full bg-white border-2 border-blcGreen flex justify-center items-center">
+                        <div
+                            class="w-[70%] h-[70%] bg-blcGreen rounded-full border-2 border-white flex justify-center items-center">
+                            <div class="w-[50%] h-[50%] bg-white rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="absolute top-[30%] left-[65%] rounded-full h-[2rem] w-[2rem] bg-blcGreen border-2 border-white flex justify-center items-center  animate-ping">
+                    <div
+                        class="w-[70%] h-[70%] rounded-full bg-white border-2 border-blcGreen flex justify-center items-center">
+                        <div
+                            class="w-[70%] h-[70%] bg-blcGreen rounded-full border-2 border-white flex justify-center items-center">
+                            <div class="w-[50%] h-[50%] bg-white rounded-full"></div>
+                        </div>
+                    </div>
+                </div> -->
             </div>
         </div>
     </div>
+
+
+    <div class="relative top-0 left-0">
+        <div class="absolute w-full">
+            <img class="w-full" src="/asset/box-img.png" alt="">
+        </div>
+        <div
+            class="container mx-auto px-3 pt-[25rem] pb-7 md:px-[27rem] sm:max-w-full lg:max-w-full lg:px-[15rem] xl:px-[22rem] 2xl:px-[22rem]">
+            <div class="flex justify-between">
+                <div class="w-[45%] flex flex-col justify-between h-full">
+                    <h2 class=" font-black text-4xl pb-4 md:text-5xl">Логистика и складские услуги </h2>
+                    <div class="leading-5">
+                        <div class="text-blcGreyText text-2xl font-medium">
+                            Мы предлагаем полный спектр логистических услуг: хранение, упаковку и распределение грузов.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
     <div
-        class="container mx-auto px-3 pt-11 pb-7 md:pt-[6.4rem] md:px-[27rem] sm:max-w-full lg:max-w-full lg:px-[15rem] xl:px-[22rem] 2xl:px-[22rem]">
+        class="container mx-auto px-3 pt-11 pb-7 md:pt-[6.4rem] md:px-[27rem] sm:max-w-full lg:max-w-full lg:px-[15rem] xl:px-[22rem] 2xl:px-[22rem] anim">
         <div class="flex justify-between">
             <div class="w-full flex flex-col justify-between h-full">
-                <h2 class=" font-black text-4xl pb-4 md:text-5xl">Преимущества</h2>
+                <h2 class=" font-black text-4xl pb-10 md:text-5xl">Преимущества</h2>
                 <ul class="flex w-full gap-24">
-                    <li class="flex-1">
-                        <div class="text-blcGrey font-black text-6xl">01</div>
-                        <h4 class=" text-2xl font-bold pb-5">Надежность и
-                            Безопасность</h5>
+                    <li class="">
+                        <div class="text-blcGrey font-black text-7xl pb-5">01</div>
+                        <div class="w-[20rem]">
+                            <h4 class=" text-2xl font-bold pb-5">Надежность и
+                                Безопасность</h4>
                             <div class="text-blcGreyText text-2xl font-medium">
-                                Наши специалисты тщательно контролируют каждый этап транспортировки, гарантируя полную
-                                безопасность ваших грузов.
+                                Наши специалисты тщательно контролируют каждый этап транспортировки, гарантируя
+                                полную безопасность ваших грузов. <br>
                                 Мы несём полную ответственность за сохранность и своевременную доставку товара.
                             </div>
-                            <div class="flex gap-1 items-center">
-                                <button
-                                    class="bg-transparent text-blcGreen border-4  text-2xl font-bold items-center flex rounded-full gap-3 py-4 px-10 mt-10 flex justify-center items-center">
-                                    <div>Узнать больше</div>
-                                </button>
+                        </div>
 
-                                <button
-                                    class="bg-blcGreen text-white text-2xl font-medium items-center flex rounded-full gap-3 w-16 h-16 mt-10 flex justify-center items-center">
-                                    <svg width="16.634033" height="15.114624" viewBox="0 0 16.634 15.1146" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                        <desc>
-                                            Created with Pixso.
-                                        </desc>
-                                        <defs />
-                                        <path id="Arrow 1"
-                                            d="M11.27 2.85L2.5 2.85C1.62 2.85 0.93 2.22 0.93 1.42C0.93 0.62 1.62 0 2.5 0L15.06 0C15.94 0 16.63 0.62 16.63 1.42L16.63 12.83C16.63 13.63 15.94 14.26 15.06 14.26C14.18 14.26 13.49 13.63 13.49 12.83L13.49 4.87L2.22 15.11L0 13.09L11.27 2.85Z"
-                                            fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd" />
-                                    </svg>
-                                </button>
+                        <div id="openForm" class="flex gap-1 items-center group">
+                            <button
+                                class="bg-transparent text-blcGreen border-4 border-blcGreen transition-all duration-300 text-2xl font-bold items-center flex rounded-full gap-3 py-4 px-10 mt-10 flex justify-center items-center group-hover:text-white group-hover:bg-blcGreen">
+                                <div>Узнать больше</div>
+                            </button>
 
-                            </div>
+                            <button
+                                class="bg-blcGreen text-white border-4 border-4 border-blcGreen text-2xl transition-all duration-300 font-medium items-center flex rounded-full gap-3 w-16 h-16 mt-10 flex justify-center items-center group-hover:bg-[rgba(0,0,0,0.001)] ">
+                                <svg class="" width="16.634033" height="15.114624" viewBox="0 0 16.634 15.1146" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <desc>
+                                        Created with Pixso.
+                                    </desc>
+                                    <defs />
+                                    <path class="fill-white transition-colors duration-300 group-hover:fill-blcGreen" id="Arrow 1"
+                                        d="M11.27 2.85L2.5 2.85C1.62 2.85 0.93 2.22 0.93 1.42C0.93 0.62 1.62 0 2.5 0L15.06 0C15.94 0 16.63 0.62 16.63 1.42L16.63 12.83C16.63 13.63 15.94 14.26 15.06 14.26C14.18 14.26 13.49 13.63 13.49 12.83L13.49 4.87L2.22 15.11L0 13.09L11.27 2.85Z"
+                                        fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </div>
+
+
                     </li>
-                    <li class="flex-1">
-                        <div class="text-blcGrey font-black text-6xl">01</div>
-                        <h4 class=" text-2xl font-bold pb-5">Надежность и
-                            Безопасность</h5>
-                            <div class="text-blcGreyText text-2xl font-medium">
-                                Наши специалисты тщательно контролируют каждый этап транспортировки, гарантируя полную
-                                безопасность ваших грузов.
-                                Мы несём полную ответственность за сохранность и своевременную доставку товара.
-                            </div>
+                    <li class="pt-[20%] w-[20rem]">
+                        <div class="text-blcGrey font-black text-7xl pb-5">02</div>
+                        <h4 class=" text-2xl font-bold pb-5">Индивидуальный
+                            Подход</h4>
+                        <div class="text-blcGreyText text-2xl font-medium">
+                            Каждый заказ уникален и требует индивидуального подхода. Наши специалисты предлагают
+                            решения, учитывающие особенности товаров. <br>
+                            Они всегда готовы проконсультировать вас и помочь выбрать оптимальный вариант перевозки.
+                        </div>
                     </li>
-                    <li class="flex-1">
-                        <div class="text-blcGrey font-black text-6xl">01</div>
-                        <h4 class=" text-2xl font-bold pb-5">Надежность и
-                            Безопасность</h5>
-                            <div class="text-blcGreyText text-2xl font-medium">
-                                Наши специалисты тщательно контролируют каждый этап транспортировки, гарантируя полную
-                                безопасность ваших грузов.
-                                Мы несём полную ответственность за сохранность и своевременную доставку товара.
-                            </div>
+                    <li class=" pt-[32%] w-[20rem]">
+                        <div class="text-blcGrey font-black text-7xl pb-5">03</div>
+                        <h4 class=" text-2xl font-bold pb-5">Высокие
+                            Технологии</h4>
+                        <div class="text-blcGreyText text-2xl font-medium">
+                            Мы применяем передовые технологии и автоматизированные системы для надёжного и
+                            эффективного управления логистическими процессами. <br>
+                            Клиенты могут отслеживать перемещение своих грузов в режиме реального времени.
+                        </div>
                     </li>
-                    <li class="flex-1">
-                        <div class="text-blcGrey font-black text-6xl">01</div>
-                        <h4 class=" text-2xl font-bold pb-5">Надежность и
-                            Безопасность</h5>
-                            <div class="text-blcGreyText text-2xl font-medium">
-                                Наши специалисты тщательно контролируют каждый этап транспортировки, гарантируя полную
-                                безопасность ваших грузов.
-                                Мы несём полную ответственность за сохранность и своевременную доставку товара.
-                            </div>
+                    <li class=" pt-[38%] w-[20rem]">
+                        <div class="text-blcGrey font-black text-7xl pb-5">04</div>
+                        <h4 class=" text-2xl font-bold pb-5">Глобальная
+                            Сеть Партнёров</h4>
+                        <div class="text-blcGreyText text-2xl font-medium">
+                            Наша команда сотрудничает с надежными логистическими фирмами и операторами. <br>
+                            Благодаря этому мы можем предложить вам стабильные и конкурентоспособные условия доставки
+                            ваших товаров.
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -386,7 +461,7 @@
     </div>
 
     <div
-        class="mx-auto px-3 pt-11 pb-7 md:pt-[6.4rem] md:px-[27rem] sm:max-w-full lg:max-w-full lg:px-[15rem] xl:px-[22rem] 2xl:px-[22rem] ">
+        class="mx-auto px-3 pt-11 pb-7 md:px-[27rem] sm:max-w-full lg:max-w-full lg:px-[15rem] xl:px-[22rem] 2xl:px-[22rem] anim">
         <div class="flex justify-between bg-blcGreen rounded-[2rem] p-10 items-center">
             <div class="w-[48%] h-[20rem] relative">
                 <img class="absolute bottom-0 left-0 w-full" src="/asset/box.png" alt="">
@@ -404,10 +479,10 @@
             </div>
         </div>
     </div>
-
+    </div>
     <footer
-        class="container mx-auto px-3 pt-11 pb-7 md:pt-[6.4rem] md:px-[27rem] sm:max-w-full lg:max-w-full lg:px-[15rem] xl:px-[22rem] 2xl:px-[22rem] py-10 ">
-        <h2 class=" font-black text-4xl pb-4 md:text-5xl">Контакты</h2>
+        class="container mx-auto px-3 pt-11 pb-7 md:pt-[9rem] md:px-[27rem] sm:max-w-full lg:max-w-full lg:px-[15rem] xl:px-[22rem] 2xl:px-[22rem] py-10 ">
+        <h2 class=" font-black text-4xl  md:text-5xl pb-14">Контакты</h2>
 
         <div class="flex justify-between items-center flex-col md:flex-row">
             <div class="w-[35%]">
@@ -417,27 +492,23 @@
                     </div>
                     <div class="flex flex-col gap-3 pt-6">
                         <input id="inputName" name="name" type="text" tabindex="1" placeholder="Ваше имя"
-                            class="text-lg bg-blcGrey rounded-full py-[1.2rem] px-8 placeholder-blcGreyText  outline-none focus:bg-gray-200 focus:outline-none hover:outline-none hover:ring-0 hover:shadow-none"
+                            class="text-lg bg-blcGrey font-medium  rounded-full py-[1.2rem] px-8 placeholder-blcGreyText  outline-none focus:bg-gray-200 focus:outline-none hover:outline-none hover:ring-0 hover:shadow-none"
                             type="text">
 
                         <input id="inputPhone" name="phone" type="text" tabindex="2" placeholder="*Ваш телефон"
-                            class="text-lg bg-blcGrey rounded-full py-[1.2rem] px-8 placeholder-blcGreyText  outline-none focus:bg-gray-200 focus:outline-none hover:outline-none hover:ring-0 hover:shadow-none"
+                            class="text-lg bg-blcGrey font-medium  rounded-full py-[1.2rem] px-8 placeholder-blcGreyText  outline-none focus:bg-gray-200 focus:outline-none hover:outline-none hover:ring-0 hover:shadow-none"
                             type="text">
                         <input id="inputEmail" name="email" type="text" tabindex="3" placeholder="*Ваша эл-почта"
-                            class="text-lg bg-blcGrey rounded-full py-[1.2rem] px-8 placeholder-blcGreyText  outline-none focus:bg-gray-200 focus:outline-none hover:outline-none hover:ring-0 hover:shadow-none"
+                            class="text-lg bg-blcGrey font-medium  rounded-full py-[1.2rem] px-8 placeholder-blcGreyText  outline-none focus:bg-gray-200 focus:outline-none hover:outline-none hover:ring-0 hover:shadow-none"
                             type="text">
                     </div>
-                    <p class="text-blcGreyText pt-3 pb-2 text-lg font-medium">*обязательно для заполнения
+                    <p class="text-md text-blcGreyText font-medium leading-4 pb-10 pt-2">*обязательно для заполнения
                     </p>
-                    <div class="flex items-center justify-between md:pb-0 pb-10">
+                    <div class="flex items-center justify-between">
                         <input id="send-1" name="form-base-submit" type="submit" value="Отправить"
-                            class="bg-blcGreen text-white text-2xl font-medium items-center flex rounded-full gap-3 py-4 px-10 mt-10 text-blcGreen border-4  font-bold">
-                        <p class="w-[48%] pt-3 text-lg text-blcGreyText font-medium">Нажимая на
-                            кнопку
-                            “Оставить
-                            заявку”, Вы
-                            соглашаетесь с
-                            политикой обработки ПД</p>
+                            class="w-[48%] bg-blcGreen text-white text-2xl font-medium items-center flex rounded-full gap-3 py-4 px-10 text-blcGreen border-4 font-bold">
+                        <p class="w-[48%] text-md text-blcGreyText font-medium leading-4">Нажимая на кнопку
+                            “Оставить заявку”, Вы соглашаетесь с политикой обработки ПД</p>
                     </div>
                 </form>
                 <div id="ThankFooter" class="md:w-full flex items-center justify-center hidden">
@@ -461,7 +532,8 @@
                 </div>
                 <div class="md:pb-10 pb-5">
                     <div class="text-blcGreyText text-2xl font-medium">Адрес:</div>
-                    <a class="text-[2rem] font-black hover:text-lightgreen transition-all duration-300 " href="">Nº 88,
+                    <a class="text-[2rem] font-black hover:text-lightgreen transition-all duration-300 " href="">Nº
+                        88,
                         улица Чжэньсин, район футянь, город Шэньчжэнь
                     </a>
                 </div>
@@ -472,20 +544,21 @@
                 </div>
             </div>
         </div>
-        <div class="flex justify-between items-center">
+        <div class="flex justify-between items-center pt-[9rem]">
             <a href="">
                 <img class="w-36" src="./asset/logo.svg" alt="логотип">
             </a>
 
             <a href="#body"
-                class="bg-blcGreen text-white text-2xl font-medium items-center flex rounded-full gap-3 w-16 h-16 mt-10 flex justify-center items-center">
-                <svg width="19.982544" height="22.123535" viewBox="0 0 19.9825 22.1235" fill="none"
-                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                class="bg-blcGreen text-white text-2xl font-medium items-center flex rounded-full gap-3 w-16 h-16 mt-10 flex justify-center items-center border-4 border-blcGreen hover:text-blcGreen hover:bg-[rgba(0,0,0,0.001)] transition-all duration-500 group">
+                <svg class="group-hover:animate-bounce" width="19.982544" height="22.123535"
+                    viewBox="0 0 19.9825 22.1235" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
                     <desc>
                         Created with Pixso.
                     </desc>
                     <defs />
-                    <path id="Arrow 2"
+                    <path class="fill-white transition-colors duration-300 group-hover:fill-blcGreen" id="Arrow 2"
                         d="M8.52 5.11L2.56 11C1.96 11.59 1.02 11.58 0.43 10.99C-0.16 10.39 -0.15 9.46 0.45 8.87L8.99 0.43C9.58 -0.16 10.52 -0.15 11.11 0.45L19.54 8.99C20.13 9.58 20.12 10.52 19.53 11.11C18.93 11.7 17.99 11.69 17.4 11.09L11.52 5.13L11.41 22.12L8.41 22.1L8.52 5.11Z"
                         fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd" />
                 </svg>
@@ -495,9 +568,11 @@
         <div class="pt-10">
             <hr class="border-t-[3px] border-blcGrey ">
             <div class="flex justify-between pt-2">
-                <div class="text-[0.70rem] pt-3 text-lg text-blcGreyText font-medium">Политика обработки персональных
+                <div class="text-[0.70rem] pt-3 text-lg text-blcGreyText font-medium">Политика обработки
+                    персональных
                     данных</div>
-                <div class="text-[0.70rem] pt-3 text-lg text-blcGreyText font-medium">2024 kargo.ru. Все права защищены.
+                <div class="text-[0.70rem] pt-3 text-lg text-blcGreyText font-medium">2024 kargo.ru. Все права
+                    защищены.
                 </div>
             </div>
         </div>
@@ -517,6 +592,7 @@
 
 
     <script>
+
         document.querySelectorAll('#image-switch-list li').forEach(item => {
             item.addEventListener('mouseenter', event => {
                 const imgSrc = item.getAttribute('data-img');
@@ -535,7 +611,23 @@
             });
         });
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fade-in-up');
+                    } else {
+                        entry.target.classList.remove('animate-fade-in-up'); // Удаляем класс при выходе
+                    }
+                });
+            });
 
+            // Получаем все элементы с классом 'anim' и добавляем их к наблюдателю
+            const elements = document.querySelectorAll('.anim');
+            elements.forEach(element => observer.observe(element));
+        });
+    </script>
 
 </body>
 
