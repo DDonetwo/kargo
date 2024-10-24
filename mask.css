@@ -1,17 +1,27 @@
-.mask-custom {
-    -webkit-mask-image: url('asset/mask-hero.svg');
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-size: cover;
-    mask-image: url('asset/mask-hero.svg');
-    mask-repeat: no-repeat;
-    mask-size: cover;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.mask-custom-small {
+@layer utilities {
+  /* Маска для маленьких экранов */
+  .mask-custom-small {
     -webkit-mask-image: url('asset/mask-hero-small.svg');
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: cover;
     mask-image: url('asset/mask-hero-small.svg');
     mask-repeat: no-repeat;
     mask-size: cover;
+  }
+
+  /* Маска для больших экранов (начиная с md) */
+  @media (min-width: 768px) {
+    .mask-custom {
+      -webkit-mask-image: url('asset/mask-hero.svg');
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-size: cover;
+      mask-image: url('asset/mask-hero.svg');
+      mask-repeat: no-repeat;
+      mask-size: cover;
+    }
+  }
 }
