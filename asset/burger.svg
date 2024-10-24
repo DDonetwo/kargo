@@ -1,5 +1,10 @@
-<svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect y="4.35406" width="29" height="2.71875" rx="1.35938" fill="#1FDF88"/>
-<rect y="13.1402" width="29" height="2.71875" rx="1.35938" fill="#1FDF88"/>
-<rect y="21.9272" width="29" height="2.71875" rx="1.35938" fill="#1FDF88"/>
+<svg width="29.000000" height="29.000000" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs/>
+	<rect id="бургер" rx="-0.500000" width="28.000000" height="28.000000" transform="translate(0.500000 0.500000)" fill="#FFFFFF" fill-opacity="0"/>
+	<rect id="Rectangle 202" y="4.354065" rx="1.359375" width="29.000000" height="2.718750" fill="#3F3939" fill-opacity="1.000000"/>
+	<rect id="Rectangle 203" y="13.140198" rx="1.359375" width="29.000000" height="2.718750" fill="#3F3939" fill-opacity="1.000000"/>
+	<rect id="Rectangle 204" y="21.927185" rx="1.359375" width="29.000000" height="2.718750" fill="#3F3939" fill-opacity="1.000000"/>
 </svg>

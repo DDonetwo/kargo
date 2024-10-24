@@ -54,11 +54,10 @@
         class="z-[1000] hidden fixed top-0 left-0 w-full h-full flex items-center justify-center bg-blcBlack bg-opacity-50">
         <form id="form-base-1" name="form-base-1" method="post" class="flex items-center justify-center">
             <div class="bg-white w-[90%] md:w-[40rem] h-auto flex flex-col rounded-2xl">
-
                 <img id="close"
-                    class="md:w-5 w-4 h-4 md:h-5 self-end transition-all duration-500 ease-linear hover:opacity-40 mt-5 mr-5"
+                    class="md:w-5 w-4 h-4 md:h-5 self-end transition-all duration-500 ease-linear hover:opacity-40 mt-5 mb-5 mr-5"
                     src="./asset/close.svg" alt="Закрыть окно">
-                <div class="px-5 pb-10 md:px-10 h-full flex flex-col justify-center">
+                <div class="px-5 pb-12 md:px-10 h-full flex flex-col justify-center">
                     <h4 class="font-black text-4xl pb-4 md:text-5xl">Заказать звонок</h4>
                     <p class="text-blcGreyText text-2xl font-medium">Заполните форму и менеджер свяжется с вами в
                         ближайшее время.
@@ -78,7 +77,7 @@
                     </p>
                     <div class="flex items-center justify-between">
                         <input id="send-1" name="form-base-submit" type="submit" value="Отправить"
-                            class="w-[48%] bg-blcGreen text-white text-2xl font-medium items-center flex rounded-full gap-3 py-4 px-10 text-blcGreen border-4 font-bold">
+                            class="w-[48%] bg-blcGreen text-white text-2xl font-medium items-center flex rounded-full gap-3 py-4 px-10  border-blcGreen text-blcGreen border-4 font-bold transition-all duration-500 hover:text-blcGreen hover:bg-[rgba(0,0,0,0.001)]">
                         <p class="w-[48%] text-md text-blcGreyText font-medium leading-4">Нажимая на кнопку
                             “Оставить заявку”, Вы соглашаетесь с политикой обработки ПД</p>
                     </div>
@@ -112,52 +111,71 @@
         </div>
 
         <button id="openMenu" class="md:hidden">
-            <img class="w-7 hover:opacity-40" src="./asset/burger.svg" alt="Открыть меню">
+            <svg class="w-10 hover:opacity-40" width="29.000000" height="29.000000" viewBox="0 0 29 29" fill="none"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <desc>
+                    Created with Pixso.
+                </desc>
+                <defs />
+                <rect id="бургер" rx="-0.500000" width="28.000000" height="28.000000"
+                    transform="translate(0.500000 0.500000)" fill="#FFFFFF" fill-opacity="0" />
+                <rect id="Rectangle 202" y="4.354065" rx="1.359375" width="29.000000" height="2.718750" fill="#3F3939"
+                    fill-opacity="1.000000" />
+                <rect id="Rectangle 203" y="13.140198" rx="1.359375" width="29.000000" height="2.718750" fill="#3F3939"
+                    fill-opacity="1.000000" />
+                <rect id="Rectangle 204" y="21.927185" rx="1.359375" width="29.000000" height="2.718750" fill="#3F3939"
+                    fill-opacity="1.000000" />
+            </svg>
         </button>
     </header>
+
+
     <div id="Menu"
-        class="hidden  items-center justify-between flex-col h-full gap-3 bg-customgradient pt-20 fixed top-0 w-full z-10">
-        <div class="flex flex-col items-center gap-2 pt-10">
-            <a class="text-xl text-white font-black hover:text-lightgreen transition-all duration-300"
-                href="#development">О
-                разработке</a>
-            <a class="text-xl text-white font-black hover:text-lightgreen transition-all duration-300"
-                href="#functional">Функционал</a>
-            <a class="text-xl text-white font-black hover:text-lightgreen transition-all duration-300"
-                href="#advantages">Преимущества</a>
-            <a class="text-xl text-white font-black hover:text-lightgreen transition-all duration-300"
-                href="#faq">FAQ</a>
-            <a class="text-xl text-white font-black hover:text-lightgreen transition-all duration-300"
+        class="hidden bg-white px-5 items-start justify-between flex-col h-full gap-3 bg-customgradient pt-20 fixed top-0 w-full z-10">
+        <div class="flex flex-col items-start gap-2 pt-10">
+            <a class="text-xl font-black hover:text-lightgreen transition-all duration-300" href="#functional">О нас</a>
+            <a class="text-xl font-black hover:text-lightgreen transition-all duration-300"
+                href="#advantages">Услуги</a>
+            <a class="text-xl font-black hover:text-lightgreen transition-all duration-300" href="#faq">Преимущества</a>
+            <a class="text-xl font-black hover:text-lightgreen transition-all duration-300"
                 href="#contacts">Контакты</a>
             <div class="flex gap-10 pt-20">
             </div>
         </div>
         <div class="pb-10 flex gap-10">
             <a class="text-lightgreen hover:text-white text-xl transition-all duration-300"
-                href="mailto:sales@harbox.ru">sales@harbox.ru</a>
-            <a class="text-lightgreen hover:text-white text-xl transition-all duration-300" href="tel:+78007772479">8
-                800 777 2479</a>
+                href="mailto:sales@harbox.ru">seles@kargo.ru</a>
+            <div class="flex flex-col">
+                <a class="text-lightgreen hover:text-white text-xl transition-all duration-300"
+                    href="tel:+78007772479">+79032905701 </a>
+                <a class="text-lightgreen hover:text-white text-xl transition-all duration-300"
+                    href="tel:+78007772479">+8613104699145</a>
+            </div>
+
         </div>
     </div>
 
-    <div id="hero"
-        class="mask-custom h-[70.1rem] flex mx-auto md:mx-[27rem] sm:max-w-full lg:max-w-full lg:mx-[15rem] xl:mx-[22rem] 2xl:mx-[22rem] bg-no-repeat bg-cover bg-center md:p-20 px-3"
-        style="background-image: url('./asset/hero.jpeg');">
-        <div class="flex items-center">
-            <div class="text-white mb-[6.2rem] w-[45%] flex flex-col pt-40">
-                <h1 class="md:text-7xl md:pt-[3.3rem] text-6xl font-black pb-4 text-white anim">
+    <div id="hero" class="md:mask-custom mask-custom-small mt-16 h-[48.8rem] md:h-[70.1rem] flex mt-0 md:mt-14 p-5 md:mx-[27rem] sm:max-w-full lg:max-w-full  
+    bg-no-repeat bg-cover bg-center md:p-20 mx-3 md:bg-[url('./asset/hero.jpeg')] bg-[url('./asset/hero-small.jpeg')]">
+        <div class="flex item-start md:items-center relative">
+            <div class="text-white mb-[6.2rem] w-full md:w-[35%] flex flex-col pt-0 md:pt-20 md:pt-0">
+                <h1 class="md:text-7xl md:pt-[3.3rem] pt-[4rem] text-6xl font-black pb-4 text-white anim">
                     BEST LOGISTIC <br>
                     COMPANY
                 </h1>
                 <h3 class="text-4xl anim">Индивидуальный подход <br>к каждому заказу</h3>
-                <p class="pb-7 md:leading-[1.9rem] leading-6 md:text-2xl pt-20 anim">
+                <p class="pb-7 md:leading-[1.9rem] md:w-full leading-6 md:text-2xl pt-20 anim w-[35%]">
                     Выкупаем и доставляем товары
                     с китайских площадок: Taobao, AliExpress, 1688, т.д
                     Минимальный вес для доставки: 1 кг
                     Срок от: 10000 дней
                 </p>
-
-                <div class="bg-no-repeat bg-cover bg-center h-[11.3rem] text-blcBlack pt-5 pr-6 pl-6 pb-10 flex flex-col gap-2 justify-between mt-40 anim"
+                <button id="openForm"
+                    class="md:hidden flex absolute bottom-0 left-0 flex anim bg-blcGreen text-white text-2xl font-medium items-center justify-center rounded-full 
+                    gap-4 py-4 px-10 mt-10 border-2 border-blcGreen font-bold hover:text-blcGreen hover:bg-[rgba(0,0,0,0.001)] transition-all duration-500 group">
+                    <div>Связаться</div>
+                </button>
+                <div class="hidden bg-no-repeat bg-cover bg-center h-[11.3rem] text-blcBlack pt-5 pr-6 pl-6 pb-10 flex flex-col gap-2 justify-between mt-40 anim"
                     style="background-image: url('./asset/form.svg');">
                     <h4 class="text-2xl font-bold pt-2">Оставить заявку</h4>
                     <form class="flex justify-between items-center gap-2" action="">
@@ -169,16 +187,15 @@
                 </div>
             </div>
         </div>
+
+
     </div>
 
 
-
-
-
-    <div id=""
-        class=" mx-auto px-3 pt-11 pb-7 md:pt-[6.4rem] md:px-[27rem] sm:max-w-full lg:max-w-full lg:px-[15rem] xl:px-[22rem] 2xl:px-[22rem]">
-        <div class="flex justify-between">
-            <div class="w-[45%]  ">
+    <div id="about"
+        class="mx-auto px-3 pt-11 pb-7 md:pt-[6.4rem] md:px-[27rem] sm:max-w-full lg:max-w-full lg:px-[15rem] xl:px-[22rem] 2xl:px-[22rem]">
+        <div class="flex justify-between md:gap-0 gap-20 flex-col md:flex-row">
+            <div class="md:w-[45%] w-full">
                 <ul class="w-full h-full flex flex-col justify-between">
                     <li class="flex items-top justify-between border-b-[3px] border-blcGrey flex-1 py-10 anim">
                         <div class="text-blcGrey font-black text-7xl">01</div>
@@ -187,7 +204,7 @@
                             <p class="text-blcGreyText text-2xl font-medium">из ассортимента магазинов-партнеров</p>
                         </div>
                         <div>
-                            <button>
+                            <button class="group">
                                 <svg class="w-6 h-6 mt-[1rem]" width="21.260376" height="20.660339"
                                     viewBox="0 0 21.2604 20.6603" fill="none" xmlns="http://www.w3.org/2000/svg"
                                     xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -195,7 +212,9 @@
                                         Created with Pixso.
                                     </desc>
                                     <defs />
-                                    <path id="Arrow 2"
+                                    <path
+                                        class="fill-[#908F8F] transition-colors duration-300 group-hover:fill-[#3F3939]"
+                                        id="Arrow 2"
                                         d="M14.35 4.49L3.21 3.98C2.1 3.93 1.26 3.02 1.32 1.9C1.38 0.78 2.3 -0.05 3.41 0L19.36 0.72C20.48 0.77 21.31 1.69 21.25 2.81L20.45 18.75C20.4 19.87 19.48 20.7 18.36 20.65C17.24 20.6 16.41 19.69 16.47 18.57L17.02 7.44L2.67 20.48L0 17.53L14.35 4.49Z"
                                         fill="#908F8F" fill-opacity="1.000000" fill-rule="evenodd" />
                                 </svg>
@@ -210,7 +229,7 @@
                             </p>
                         </div>
                         <div>
-                            <button>
+                            <button class="group">
                                 <svg class="w-6 h-6 mt-[1rem]" width="21.260376" height="20.660339"
                                     viewBox="0 0 21.2604 20.6603" fill="none" xmlns="http://www.w3.org/2000/svg"
                                     xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -218,7 +237,9 @@
                                         Created with Pixso.
                                     </desc>
                                     <defs />
-                                    <path id="Arrow 2"
+                                    <path
+                                        class="fill-[#908F8F] transition-colors duration-300 group-hover:fill-[#3F3939]"
+                                        id="Arrow 2"
                                         d="M14.35 4.49L3.21 3.98C2.1 3.93 1.26 3.02 1.32 1.9C1.38 0.78 2.3 -0.05 3.41 0L19.36 0.72C20.48 0.77 21.31 1.69 21.25 2.81L20.45 18.75C20.4 19.87 19.48 20.7 18.36 20.65C17.24 20.6 16.41 19.69 16.47 18.57L17.02 7.44L2.67 20.48L0 17.53L14.35 4.49Z"
                                         fill="#908F8F" fill-opacity="1.000000" fill-rule="evenodd" />
                                 </svg>
@@ -232,7 +253,7 @@
                             <p class="text-blcGreyText text-2xl font-medium">в режиме онлайн и ждите доставку в срок</p>
                         </div>
                         <div>
-                            <button>
+                            <button class="group">
                                 <svg class="w-6 h-6 mt-[1rem]" width="21.260376" height="20.660339"
                                     viewBox="0 0 21.2604 20.6603" fill="none" xmlns="http://www.w3.org/2000/svg"
                                     xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -240,7 +261,9 @@
                                         Created with Pixso.
                                     </desc>
                                     <defs />
-                                    <path id="Arrow 2"
+                                    <path
+                                        class="fill-[#908F8F] transition-colors duration-300 group-hover:fill-[#3F3939]"
+                                        id="Arrow 2"
                                         d="M14.35 4.49L3.21 3.98C2.1 3.93 1.26 3.02 1.32 1.9C1.38 0.78 2.3 -0.05 3.41 0L19.36 0.72C20.48 0.77 21.31 1.69 21.25 2.81L20.45 18.75C20.4 19.87 19.48 20.7 18.36 20.65C17.24 20.6 16.41 19.69 16.47 18.57L17.02 7.44L2.67 20.48L0 17.53L14.35 4.49Z"
                                         fill="#908F8F" fill-opacity="1.000000" fill-rule="evenodd" />
                                 </svg>
@@ -249,7 +272,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="w-[45%] flex flex-col justify-between h-full">
+            <div class="md:w-[45%] w-full flex flex-col justify-between h-full">
                 <h2 class=" font-black text-4xl pb-4 md:text-5xl anim">Мы — команда профессионалов,
                     специализирующихся на международных грузовых перевозках.</h2>
                 <div class="leading-5">
@@ -263,9 +286,9 @@
                 </div>
                 <div>
                     <button id="openForm"
-                        class="anim bg-blcGreen text-white text-2xl font-medium items-center flex justify-center rounded-full gap-4 py-4 px-10 mt-10 border-4 border-blcGreen font-bold hover:text-blcGreen hover:bg-[rgba(0,0,0,0.001)] transition-all duration-500 group">
+                        class="justify-self-center md:justify-self-star anim bg-blcGreen text-white text-2xl font-medium items-center flex justify-center rounded-full gap-4 py-4 px-10 mt-10 border-2 md:border-4 border-blcGreen font-bold hover:text-blcGreen hover:bg-[rgba(0,0,0,0.001)] transition-all duration-500 group">
                         <div>Связаться с нами</div>
-                        <svg class="group-hover:animate-bounce  " width="25.000000" height="25.000000"
+                        <svg class="group-hover:animate-bounce w-7" width="25.000000" height="25.000000"
                             viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink">
                             <desc>
@@ -282,10 +305,11 @@
             </div>
         </div>
     </div>
+
     <div
         class="container mx-auto px-3 pt-11 md:pt-[9rem] md:px-[27rem] sm:max-w-full lg:max-w-full lg:px-[15rem] xl:px-[22rem] 2xl:px-[22rem]">
-        <div class="flex justify-between">
-            <div class="w-[45%] flex flex-col justify-between h-full">
+        <div class="flex justify-between md:gap-0 gap-20 flex-col-reverse md:flex-row">
+            <div class="w-full md:w-[45%] flex flex-col justify-between h-full">
                 <h2 class=" font-black text-4xl pb-4 md:text-5xl">Международные карго перевозки
                 </h2>
                 <div class="leading-5">
@@ -296,10 +320,10 @@
                 </div>
                 <div>
                     <button id="openForm"
-                        class="anim bg-blcGreen text-white text-2xl font-medium items-center flex justify-center rounded-full gap-4 py-4 px-10 mt-10 border-4 border-blcGreen font-bold hover:text-blcGreen hover:bg-[rgba(0,0,0,0.001)] transition-all duration-500 group">
+                        class="justify-self-center md:justify-self-start anim bg-blcGreen text-white text-2xl font-medium items-center flex justify-center rounded-full gap-4 py-4 px-10 mt-10 border-2 md:border-4 border-blcGreen font-bold hover:text-blcGreen hover:bg-[rgba(0,0,0,0.001)] transition-all duration-500 group">
                         <div>Оставить заявку</div>
 
-                        <svg class="group-hover:animate-bounce" width="25.000000" height="18.750000"
+                        <svg class="w-7 group-hover:animate-bounce" width="25.000000" height="18.750000"
                             viewBox="0 0 25 18.75" fill="none" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink">
                             <desc>
@@ -313,10 +337,10 @@
                     </button>
                 </div>
             </div>
-            <div class="w-[50%] relative">
+            <div class="w-full md:w-[45%]  relative">
                 <img class="w-full" src="/asset/map.svg" alt="">
 
-                <!-- <div
+                <div
                     class="absolute top-[15%] left-[73%] rounded-full h-[2rem] w-[2rem] bg-blcGreen border-2 border-white flex justify-center items-center  animate-ping">
                     <div
                         class="w-[70%] h-[70%] rounded-full bg-white border-2 border-blcGreen flex justify-center items-center">
@@ -358,18 +382,18 @@
                             <div class="w-[50%] h-[50%] bg-white rounded-full"></div>
                         </div>
                     </div>
-                </div> -->
+                </div>
             </div>
         </div>
     </div>
 
 
-    <div class="relative top-0 left-0">
+    <div class="relative top-0 left-0 md:py-0 py-10">
         <div class="absolute w-full">
             <img class="w-full" src="/asset/box-img.png" alt="">
         </div>
         <div
-            class="container mx-auto px-3 pt-[25rem] pb-7 md:px-[27rem] sm:max-w-full lg:max-w-full lg:px-[15rem] xl:px-[22rem] 2xl:px-[22rem]">
+            class="container mx-auto px-3 pt-24 pb-7 md:px-[27rem] sm:max-w-full lg:max-w-full lg:px-[15rem] xl:px-[22rem] 2xl:px-[22rem]">
             <div class="flex justify-between">
                 <div class="w-[45%] flex flex-col justify-between h-full">
                     <h2 class=" font-black text-4xl pb-4 md:text-5xl">Логистика и складские услуги </h2>
@@ -382,17 +406,17 @@
                 </div>
             </div>
         </div>
-
     </div>
+
     <div
         class="container mx-auto px-3 pt-11 pb-7 md:pt-[6.4rem] md:px-[27rem] sm:max-w-full lg:max-w-full lg:px-[15rem] xl:px-[22rem] 2xl:px-[22rem] anim">
         <div class="flex justify-between">
             <div class="w-full flex flex-col justify-between h-full">
                 <h2 class=" font-black text-4xl pb-10 md:text-5xl">Преимущества</h2>
-                <ul class="flex w-full gap-24">
+                <ul class="flex w-full gap-10 md:gap-24 md:flex-row flex-col">
                     <li class="">
                         <div class="text-blcGrey font-black text-7xl pb-5">01</div>
-                        <div class="w-[20rem]">
+                        <div class="w-full md:w-[20rem]">
                             <h4 class=" text-2xl font-bold pb-5">Надежность и
                                 Безопасность</h4>
                             <div class="text-blcGreyText text-2xl font-medium">
@@ -402,30 +426,9 @@
                             </div>
                         </div>
 
-                        <div id="openForm" class="flex gap-1 items-center group">
-                            <button
-                                class="bg-transparent text-blcGreen border-4 border-blcGreen transition-all duration-300 text-2xl font-bold items-center flex rounded-full gap-3 py-4 px-10 mt-10 flex justify-center items-center group-hover:text-white group-hover:bg-blcGreen">
-                                <div>Узнать больше</div>
-                            </button>
-
-                            <button
-                                class="bg-blcGreen text-white border-4 border-4 border-blcGreen text-2xl transition-all duration-300 font-medium items-center flex rounded-full gap-3 w-16 h-16 mt-10 flex justify-center items-center group-hover:bg-[rgba(0,0,0,0.001)] ">
-                                <svg class="" width="16.634033" height="15.114624" viewBox="0 0 16.634 15.1146" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <desc>
-                                        Created with Pixso.
-                                    </desc>
-                                    <defs />
-                                    <path class="fill-white transition-colors duration-300 group-hover:fill-blcGreen" id="Arrow 1"
-                                        d="M11.27 2.85L2.5 2.85C1.62 2.85 0.93 2.22 0.93 1.42C0.93 0.62 1.62 0 2.5 0L15.06 0C15.94 0 16.63 0.62 16.63 1.42L16.63 12.83C16.63 13.63 15.94 14.26 15.06 14.26C14.18 14.26 13.49 13.63 13.49 12.83L13.49 4.87L2.22 15.11L0 13.09L11.27 2.85Z"
-                                        fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd" />
-                                </svg>
-                            </button>
-                        </div>
-
 
                     </li>
-                    <li class="pt-[20%] w-[20rem]">
+                    <li class="pt-0 md:pt-[20%] w-full md:w-[20rem]">
                         <div class="text-blcGrey font-black text-7xl pb-5">02</div>
                         <h4 class=" text-2xl font-bold pb-5">Индивидуальный
                             Подход</h4>
@@ -435,7 +438,7 @@
                             Они всегда готовы проконсультировать вас и помочь выбрать оптимальный вариант перевозки.
                         </div>
                     </li>
-                    <li class=" pt-[32%] w-[20rem]">
+                    <li class="pt-0 md:pt-[32%] w-full md:w-[20rem]">
                         <div class="text-blcGrey font-black text-7xl pb-5">03</div>
                         <h4 class=" text-2xl font-bold pb-5">Высокие
                             Технологии</h4>
@@ -445,7 +448,7 @@
                             Клиенты могут отслеживать перемещение своих грузов в режиме реального времени.
                         </div>
                     </li>
-                    <li class=" pt-[38%] w-[20rem]">
+                    <li class="pt-0 md:pt-[38%] w-full md:w-[20rem]">
                         <div class="text-blcGrey font-black text-7xl pb-5">04</div>
                         <h4 class=" text-2xl font-bold pb-5">Глобальная
                             Сеть Партнёров</h4>
@@ -455,18 +458,43 @@
                             ваших товаров.
                         </div>
                     </li>
+
+                    <li>
+                        <div id="openForm" class="flex gap-1 items-center group">
+                            <button
+                                class="bg-transparent text-blcGreen border-2 md:border-4 border-blcGreen transition-all duration-300 text-2xl font-bold items-center flex rounded-full gap-3 py-4 px-10 mt-10 flex justify-center items-center group-hover:text-white group-hover:bg-blcGreen">
+                                <div>Узнать больше</div>
+                            </button>
+
+                            <button
+                                class="bg-blcGreen text-white border-4 border-4 border-blcGreen text-2xl transition-all duration-300 font-medium items-center flex rounded-full gap-3 w-16 h-16 mt-10 flex justify-center items-center group-hover:bg-[rgba(0,0,0,0.001)] ">
+                                <svg class="w-5" width="16.634033" height="15.114624" viewBox="0 0 16.634 15.1146"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <desc>
+                                        Created with Pixso.
+                                    </desc>
+                                    <defs />
+                                    <path class="fill-white transition-colors duration-300 group-hover:fill-blcGreen"
+                                        id="Arrow 1"
+                                        d="M11.27 2.85L2.5 2.85C1.62 2.85 0.93 2.22 0.93 1.42C0.93 0.62 1.62 0 2.5 0L15.06 0C15.94 0 16.63 0.62 16.63 1.42L16.63 12.83C16.63 13.63 15.94 14.26 15.06 14.26C14.18 14.26 13.49 13.63 13.49 12.83L13.49 4.87L2.22 15.11L0 13.09L11.27 2.85Z"
+                                        fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
     </div>
 
     <div
-        class="mx-auto px-3 pt-11 pb-7 md:px-[27rem] sm:max-w-full lg:max-w-full lg:px-[15rem] xl:px-[22rem] 2xl:px-[22rem] anim">
-        <div class="flex justify-between bg-blcGreen rounded-[2rem] p-10 items-center">
-            <div class="w-[48%] h-[20rem] relative">
+        class="mx-auto px-3 mt-36 md:mt-0 pt-11 pb-7 md:px-[27rem] sm:max-w-full lg:max-w-full lg:px-[15rem] xl:px-[22rem] 2xl:px-[22rem] anim">
+        <div class="flex md:flex-row flex-col justify-between bg-blcGreen rounded-[2rem] p-10 items-center">
+            <div class="md:w-[48%] w-full h-[20rem] relative">
                 <img class="absolute bottom-0 left-0 w-full" src="/asset/box.png" alt="">
             </div>
-            <div class="w-[48%] py-20">
+            <div class="md:w-[48%] w-full py-5 md:py-20">
                 <h2 class=" font-black text-white text-4xl pb-4 md:text-5xl">Таможенное оформление
                 </h2>
                 <p class="text-white text-2xl font-medium">Наши специалисты оформят все необходимые документы для
@@ -475,18 +503,19 @@
                     <br> Мы гарантируем минимальные сроки оформления и полное соответствие всем требованиям
                     законодательства обеих стран.
                 </p>
-
             </div>
         </div>
     </div>
+
     </div>
     <footer
         class="container mx-auto px-3 pt-11 pb-7 md:pt-[9rem] md:px-[27rem] sm:max-w-full lg:max-w-full lg:px-[15rem] xl:px-[22rem] 2xl:px-[22rem] py-10 ">
         <h2 class=" font-black text-4xl  md:text-5xl pb-14">Контакты</h2>
 
-        <div class="flex justify-between items-center flex-col md:flex-row">
-            <div class="w-[35%]">
-                <form id="form-base-2" name="form-base-2" method="post" class="md:w-full">
+        <div class="flex justify-between flex-col md:flex-row ">
+            <div class="w-full md:w-[35%] h-[32rem]">
+                <form class="flex justify-between flex-col h-full" id="form-base-2" name="form-base-2" method="post"
+                    class="md:w-full">
                     <div class="text-blcGreyText text-2xl font-medium">
                         Заполните форму и менеджер свяжется с вами в ближайшее время.
                     </div>
@@ -502,11 +531,11 @@
                             class="text-lg bg-blcGrey font-medium  rounded-full py-[1.2rem] px-8 placeholder-blcGreyText  outline-none focus:bg-gray-200 focus:outline-none hover:outline-none hover:ring-0 hover:shadow-none"
                             type="text">
                     </div>
-                    <p class="text-md text-blcGreyText font-medium leading-4 pb-10 pt-2">*обязательно для заполнения
+                    <p class="text-md text-blcGreyText font-medium leading-4 pb-20 pt-2">*обязательно для заполнения
                     </p>
                     <div class="flex items-center justify-between">
                         <input id="send-1" name="form-base-submit" type="submit" value="Отправить"
-                            class="w-[48%] bg-blcGreen text-white text-2xl font-medium items-center flex rounded-full gap-3 py-4 px-10 text-blcGreen border-4 font-bold">
+                            class="w-[48%] bg-blcGreen border-4 border-blcGreen transition-all duration-500 text-white text-2xl font-medium items-center flex rounded-full gap-3 py-4 px-10 hover:text-blcGreen hover:bg-[rgba(0,0,0,0.001)] text-blcGreen border-4 font-bold">
                         <p class="w-[48%] text-md text-blcGreyText font-medium leading-4">Нажимая на кнопку
                             “Оставить заявку”, Вы соглашаетесь с политикой обработки ПД</p>
                     </div>
@@ -542,6 +571,55 @@
                         href="">地址：深圳市福田区华强北街道振兴路88号
                     </a>
                 </div>
+                <div class="flex gap-2">
+                    <a class=" text-white text-2xl font-medium items-center flex rounded-full gap-3 w-16 h-16  flex justify-center items-center border-2 md:border-4 border-blcGreen  bg-[rgba(0,0,0,0.001)] transition-all duration-500 group hover:bg-blcGreen group"
+                        href="">
+                        <svg class="w-7" width="35.000000" height="28.636230" viewBox="0 0 35 28.6362" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <desc>
+                                Created with Pixso.
+                            </desc>
+                            <defs />
+                            <path class="fill-blcGreen transition-colors duration-300 group-hover:fill-white"
+                                id="Vector"
+                                d="M23.68 8.66C24.09 8.66 24.48 8.68 24.88 8.73C23.82 3.72 18.47 0 12.39 0C5.56 0 0 4.65 0 10.57C0 13.98 1.86 16.8 4.95 18.98L3.72 22.72L8.05 20.54C9.6 20.85 10.84 21.16 12.39 21.16C12.79 21.16 13.16 21.14 13.56 21.11C13.3 20.29 13.16 19.41 13.16 18.5C13.16 13.08 17.8 8.66 23.68 8.66ZM17.03 5.28C17.95 5.28 18.57 5.9 18.57 6.84C18.57 7.77 17.95 8.39 17.03 8.39C16.09 8.39 15.17 7.77 15.17 6.84C15.17 5.9 16.1 5.28 17.03 5.28ZM8.35 8.39C7.43 8.39 6.49 7.77 6.49 6.84C6.49 5.89 7.43 5.28 8.35 5.28C9.29 5.28 9.9 5.9 9.9 6.84C9.9 7.77 9.29 8.39 8.35 8.39ZM35 18.36C35 13.38 30.04 9.33 24.47 9.33C18.57 9.33 13.94 13.38 13.94 18.36C13.94 23.34 18.58 27.39 24.47 27.39C25.7 27.39 26.95 27.07 28.2 26.76L31.6 28.63L30.66 25.53C33.15 23.65 35 21.16 35 18.36ZM21.05 16.8C20.44 16.8 19.82 16.18 19.82 15.54C19.82 14.92 20.44 14.31 21.05 14.31C21.99 14.31 22.61 14.93 22.61 15.54C22.61 16.18 21.99 16.8 21.05 16.8ZM27.87 16.8C27.25 16.8 26.64 16.18 26.64 15.54C26.64 14.92 27.26 14.31 27.87 14.31C28.79 14.31 29.42 14.93 29.42 15.54C29.43 16.18 28.79 16.8 27.87 16.8Z"
+                                fill="#218C41" fill-opacity="1.000000" fill-rule="nonzero" />
+                        </svg>
+                    </a>
+
+                    <a class=" text-white text-2xl font-medium items-center flex rounded-full gap-3 w-16 h-16  flex justify-center items-center border-2 md:border-4 border-blcGreen  bg-[rgba(0,0,0,0.001)] transition-all duration-500 group hover:bg-blcGreen group"
+                        href="">
+
+                        <svg  class="w-7"  width="34.000000" height="34.000000" viewBox="0 0 34 34" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <desc>
+                                Created with Pixso.
+                            </desc>
+                            <defs />
+                            <path class="fill-blcGreen transition-colors duration-300 group-hover:fill-white"
+                                id="Vector"
+                                d="M28.9 4.94C25.72 1.75 21.49 0 16.99 0C7.7 0 0.14 7.55 0.14 16.84C0.14 19.81 0.91 22.71 2.39 25.27L0 34L8.93 31.65C11.39 32.99 14.16 33.7 16.98 33.7L16.99 33.7C26.27 33.7 34 26.14 34 16.85C34 12.35 32.08 8.12 28.9 4.94ZM16.99 30.86C14.47 30.86 12 30.18 9.85 28.91L9.34 28.61L4.05 30L5.46 24.83L5.13 24.3C3.72 22.06 2.99 19.49 2.99 16.84C2.99 9.12 9.27 2.84 17 2.84C20.74 2.84 24.25 4.3 26.89 6.95C29.53 9.6 31.16 13.11 31.15 16.85C31.15 24.58 24.71 30.86 16.99 30.86ZM24.67 20.37C24.25 20.16 22.18 19.14 21.79 19.01C21.4 18.86 21.12 18.79 20.84 19.22C20.56 19.64 19.76 20.58 19.51 20.87C19.26 21.15 19.01 21.19 18.6 20.98C16.12 19.74 14.5 18.77 12.87 15.97C12.43 15.23 13.3 15.28 14.1 13.67C14.24 13.39 14.17 13.15 14.07 12.93C13.96 12.72 13.12 10.65 12.77 9.81C12.43 8.99 12.08 9.1 11.82 9.09C11.58 9.07 11.3 9.07 11.01 9.07C10.73 9.07 10.28 9.18 9.89 9.6C9.5 10.02 8.42 11.04 8.42 13.11C8.42 15.18 9.93 17.18 10.13 17.47C10.35 17.75 13.1 22 17.33 23.83C20 24.98 21.05 25.08 22.38 24.88C23.2 24.76 24.87 23.86 25.22 22.88C25.57 21.89 25.57 21.05 25.46 20.87C25.37 20.68 25.09 20.58 24.67 20.37Z"
+                                fill="#218C41" fill-opacity="1.000000" fill-rule="nonzero" />
+                        </svg>
+
+                    </a>
+                    <a class=" text-white text-2xl font-medium items-center flex rounded-full gap-3 w-16 h-16  flex justify-center items-center border-2 md:border-4 border-blcGreen  bg-[rgba(0,0,0,0.001)] transition-all duration-500 group hover:bg-blcGreen group"
+                        href="">
+
+                        <svg  class="w-7"  width="34.000000" height="27.567383" viewBox="0 0 34 27.5674" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <desc>
+                                Created with Pixso.
+                            </desc>
+                            <defs />
+                            <path class="fill-blcGreen transition-colors duration-300 group-hover:fill-white"
+                                id="Vector"
+                                d="M33.98 2.4C33.52 7.24 31.47 18.99 30.44 24.41C30 26.71 29.14 27.48 28.3 27.55C26.49 27.71 25.11 26.38 23.34 25.24C20.59 23.48 19.03 22.38 16.36 20.65C13.27 18.66 15.28 17.56 17.03 15.77C17.5 15.3 25.5 8.18 25.65 7.54C25.68 7.45 25.69 7.16 25.5 6.99C25.31 6.83 25.05 6.9 24.86 6.93C24.58 6.99 20.18 9.83 11.65 15.46C10.41 16.3 9.28 16.71 8.26 16.69C7.14 16.66 4.99 16.07 3.39 15.56C1.43 14.95 -0.14 14.61 0 13.55C0.07 13 0.85 12.43 2.34 11.86C11.46 7.97 17.54 5.41 20.59 4.17C29.29 0.64 31.09 0.02 32.27 0C32.53 0 33.1 0.06 33.48 0.35C33.73 0.57 33.88 0.86 33.92 1.18C33.99 1.58 34.01 1.99 33.98 2.4Z"
+                                fill="#218C41" fill-opacity="1.000000" fill-rule="evenodd" />
+                        </svg>
+
+                    </a>
+                </div>
             </div>
         </div>
         <div class="flex justify-between items-center pt-[9rem]">
@@ -550,8 +628,8 @@
             </a>
 
             <a href="#body"
-                class="bg-blcGreen text-white text-2xl font-medium items-center flex rounded-full gap-3 w-16 h-16 mt-10 flex justify-center items-center border-4 border-blcGreen hover:text-blcGreen hover:bg-[rgba(0,0,0,0.001)] transition-all duration-500 group">
-                <svg class="group-hover:animate-bounce" width="19.982544" height="22.123535"
+                class="bg-blcGreen text-white text-2xl font-medium items-center flex rounded-full gap-3 w-16 h-16 mt-10 flex justify-center items-center bordr-2 md:border-4 border-blcGreen hover:text-blcGreen hover:bg-[rgba(0,0,0,0.001)] transition-all duration-500 group">
+                <svg class="w-5 group-hover:animate-bounce" width="19.982544" height="22.123535"
                     viewBox="0 0 19.9825 22.1235" fill="none" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink">
                     <desc>
@@ -565,13 +643,13 @@
             </a>
         </div>
 
-        <div class="pt-10">
+        <div class="pt-10 ">
             <hr class="border-t-[3px] border-blcGrey ">
-            <div class="flex justify-between pt-2">
-                <div class="text-[0.70rem] pt-3 text-lg text-blcGreyText font-medium">Политика обработки
+            <div class="flex justify-between pt-2 md:flex-row flex-col">
+                <div class=" pt-3 text-md text-blcGreyText font-medium">Политика обработки
                     персональных
                     данных</div>
-                <div class="text-[0.70rem] pt-3 text-lg text-blcGreyText font-medium">2024 kargo.ru. Все права
+                <div class="pt-3 text-md  text-blcGreyText font-medium">2024 kargo.ru. Все права
                     защищены.
                 </div>
             </div>

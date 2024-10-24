@@ -6,3 +6,12 @@
     mask-repeat: no-repeat;
     mask-size: cover;
 }
+
+.mask-custom-small {
+    -webkit-mask-image: url('asset/mask-hero-small.svg');
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: cover;
+    mask-image: url('asset/mask-hero-small.svg');
+    mask-repeat: no-repeat;
+    mask-size: cover;
+}
